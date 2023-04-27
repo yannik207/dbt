@@ -76,6 +76,7 @@ select
     (extract('HOUR' from duration) * 60 + extract('MINUTE' from duration) + extract('SECOND' from duration) / 60) as duration,
     login,
     logout
+    --, rest of our surrogate keys to join with dim_tables
 from session_sum 
 group by sd.user_id
       , user_session_id
