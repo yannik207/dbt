@@ -1,0 +1,55 @@
+[name](project-configs/name): string
+
+[config-version](project-configs/config-version): 2
+[version](project-configs/version): version
+
+[profile](project-configs/profile): profilename
+
+[model-paths](project-configs/model-paths): [directorypath]
+[seed-paths](project-configs/seed-paths): [directorypath]
+[test-paths](project-configs/test-paths): [directorypath]
+[analysis-paths](project-configs/analysis-paths): [directorypath]
+[macro-paths](project-configs/macro-paths): [directorypath]
+[snapshot-paths](project-configs/snapshot-paths): [directorypath]
+[docs-paths](project-configs/docs-paths): [directorypath]
+[asset-paths](project-configs/asset-paths): [directorypath]
+
+[target-path](project-configs/target-path): directorypath
+[log-path](project-configs/log-path): directorypath
+[packages-install-path](project-configs/packages-install-path): directorypath
+
+[clean-targets](project-configs/clean-targets): [directorypath]
+
+[query-comment](project-configs/query-comment): string
+
+[require-dbt-version](project-configs/require-dbt-version): version-range | [version-range]
+
+[quoting](project-configs/quoting):
+  database: true | false
+  schema: true | false
+  identifier: true | false
+
+models:
+  [<model-configs>](model-configs)
+
+seeds:
+  [<seed-configs>](seed-configs)
+
+snapshots:
+  [<snapshot-configs>](snapshot-configs)
+
+sources:
+  [<source-configs>](source-configs)
+  
+tests:
+  [<test-configs>](test-configs)
+
+vars:
+  [<variables>](/docs/build/project-variables)
+
+[on-run-start](project-configs/on-run-start-on-run-end): sql-statement | [sql-statement]
+[on-run-end](project-configs/on-run-start-on-run-end): sql-statement | [sql-statement]
+
+[dispatch](project-configs/dispatch-config):
+  - macro_namespace: packagename
+    search_order: [packagename]
